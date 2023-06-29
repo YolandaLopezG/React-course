@@ -13,7 +13,7 @@ function Button({
   return <button>{children}</button>;
 }
 
-Button.protoTypes = {
+Button.propTypes = {
   checkVariationValue: ({ primary, secondary, success, warning, danger }) => {
     const count =
       Number(!!primary) +
