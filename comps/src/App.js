@@ -28,16 +28,6 @@ function App() {
           Look here!
         </Button>
       </div>
-      <div>
-        <Button danger outline rounded>
-          Don't click here!
-        </Button>
-      </div>
-      <div>
-        <Button warning rounded>
-          See deal!
-        </Button>
-      </div>
     </div>
   );
 }
