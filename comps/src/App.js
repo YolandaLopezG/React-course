@@ -8,10 +8,14 @@ import {
 } from "react-icons/bs";
 
 function App() {
+  const handleClick = () => {
+    console.log("Click!!");
+  };
+
   return (
     <div>
       <div>
-        <Button primary rounded outline>
+        <Button primary rounded outline className="mb-5" onClick={handleClick}>
           <BsBugFill />
           Click me!
         </Button>
