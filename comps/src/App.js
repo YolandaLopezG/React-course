@@ -1,51 +1,33 @@
-import Button from "./components/Button";
-import {
-  BsBell,
-  BsBugFill,
-  BsCashCoin,
-  BsCloudLightningRain,
-  BsController,
-} from "react-icons/bs";
+import Accordion from "./components/Accordion";
 
 function App() {
-  const handleClick = () => {
-    console.log("Click!!");
-  };
-
-  return (
-    <div>
-      <div>
-        <Button primary rounded outline className="mb-5" onClick={handleClick}>
-          <BsBugFill />
-          Click me!
-        </Button>
-      </div>
-      <div>
-        <Button secondary rounded>
-          <BsCashCoin />
-          Buy now!
-        </Button>
-      </div>
-      <div>
-        <Button warning outline>
-          <BsBell />
-          Hide Adds!
-        </Button>
-      </div>
-      <div>
-        <Button danger rounded>
-          <BsCloudLightningRain />
-          Hello!
-        </Button>
-      </div>
-      <div>
-        <Button success outline rounded>
-          <BsController />
-          Look here!
-        </Button>
-      </div>
-    </div>
-  );
+  const items = [
+    {
+      id: 'A001',
+      label: "Noticia 1",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      id: 'A002',
+      label: "Noticia 2",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      id: 'A003',
+      label: "Noticia 3",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      id: 'A004',
+      label: "Noticia 4",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+  ];
+  return <Accordion items={items} />;
 }
 
 export default App;
