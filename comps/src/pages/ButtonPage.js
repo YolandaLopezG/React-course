@@ -1,4 +1,4 @@
-import Button from "./components/Button";
+import Button from "../components/Button";
 import {
   BsBell,
   BsBugFill,
@@ -7,7 +7,7 @@ import {
   BsController,
 } from "react-icons/bs";
 
-function App() {
+function ButtonPage() {
   const handleClick = () => {
     console.log("Click!!");
   };
@@ -48,4 +48,4 @@ function App() {
   );
 }
 
-export default App;
+export default ButtonPage;
