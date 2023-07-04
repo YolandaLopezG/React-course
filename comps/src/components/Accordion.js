@@ -2,10 +2,16 @@ import { useState } from "react";
 import { BsChevronLeft, BsChevronDown } from "react-icons/bs";
 
 function Accordion({ items }) {
-  const [expandedIndex, setExpandedIndex] = useState(0);
+  const [expandedIndex, setExpandedIndex] = useState(-1);
 
   const handleClick = (nextIndex) => {
-    setExpandedIndex(nextIndex);
+    setExpandedIndex((currentExpandedIndex) => {
+      if (currentExpandedIndex === nextIndex) {
+        return -1;
+      } else {
+        return nextIndex;
+      }
+    });
   };
 
   const renderedItems = items.map((item, index) => {
