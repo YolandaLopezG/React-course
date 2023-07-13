@@ -31,7 +31,7 @@ function Dropdown({ options, value, onChange }) {
     onChange(option);
   };
 
-  const renderdOptions = options.map((option) => {
+  const renderedOptions = options.map((option) => {
     return (
       <Panel
         className="hover:bg-sky-100 rounded cursor-pointer p-1"
@@ -52,7 +52,7 @@ function Dropdown({ options, value, onChange }) {
         {value?.label || "Select..."}
         <GoChevronDown className="text-lg" />
       </Panel>
-      {isOpen && <Panel className="absolute top-full">{renderdOptions}</Panel>}
+      {isOpen && <Panel className="absolute top-full">{renderedOptions}</Panel>}
     </div>
   );
 }
