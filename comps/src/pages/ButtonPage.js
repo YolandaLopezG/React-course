@@ -15,7 +15,7 @@ function ButtonPage() {
   return (
     <div>
       <div>
-        <Button primary rounded outline className="mb-5" onClick={handleClick}>
+        <Button primary rounded outline onClick={handleClick}>
           <BsBugFill />
           Click me!
         </Button>

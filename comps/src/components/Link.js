@@ -2,7 +2,7 @@ import useNavigation from "../hooks/use-navigation";
 import classNames from "classnames";
 
 function Link({ to, children }) {
-  const { navigate } = useNavigation;
+  const { navigate } = useNavigation();
 
   const classes = classNames("text-blue-500");
 
