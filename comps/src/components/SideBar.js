@@ -5,6 +5,8 @@ function SideBar() {
     { label: "Dropdown", path: "/" },
     { label: "Accordion", path: "/accordion" },
     { label: "Buttons", path: "/buttons" },
+    { label: "Modal", path: "/modal" },
+    { label: "Table", path: "/table" },
   ];
 
   const renderedLinks = links.map((link) => {
@@ -20,7 +22,11 @@ function SideBar() {
     );
   });
 
-  return <div className="sticky top-0 flex flex-col items-start">{renderedLinks}</div>;
+  return (
+    <div className="sticky top-0 flex flex-col items-start">
+      {renderedLinks}
+    </div>
+  );
 }
 
 export default SideBar;
