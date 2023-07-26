@@ -13,56 +13,22 @@ const reducer = (state, action) => {
     case INCREMENT_COUNT:
       state.count = state.count + 1;
       return;
-    // return {
-    //   ...state,
-    //   count: state.count + 1,
-    // };
     case DECREMENT_COUNT:
       state.count = state.count - 1;
       return;
-    // return {
-    //   ...state,
-    //   count: state.count - 1,
-    // };
     case ADD_VALUE_TO_COUNT:
       state.count = state.count + state.valueToAdd;
       state.valueToAdd = 0;
       return;
-    // return {
-    //   ...state,
-    //   count: state.count + state.valueToAdd,
-    //   valueToAdd: 0,
-    // };
     case SET_VALUE_TO_ADD:
       state.valueToAdd = action.payload;
       return;
-    // return {
-    //   ...state,
-    //   valueToAdd: action.payload,
-    // };
-
-    
     default:
       return;
   }
-  // if (action.type === INCREMENT_COUNT) {
-  //   return {
-  //     ...state,
-  //     count: state.count + 1,
-  //   };
-  // }
-  // if (action.type === SET_VALUE_TO_ADD) {
-  // return {
-  //   ...state,
-  //   valueToAdd: action.payload,
-  // };
-  // }
-  // return state;
 };
 
 function CounterPage({ initialCount }) {
-  // const [count, setCount] = useState(initialCount);
-  // const [valueToAdd, setvalueToAdd] = useState(0);
 
   const [state, dispatch] = useReducer(produce(reducer), {
     count: initialCount,
@@ -70,14 +36,12 @@ function CounterPage({ initialCount }) {
   });
 
   const increment = () => {
-    // setCount(count + 1);
     dispatch({
       type: INCREMENT_COUNT,
     });
   };
 
   const decrement = () => {
-    // setCount(count - 1);
     dispatch({
       type: DECREMENT_COUNT,
     });
@@ -85,7 +49,6 @@ function CounterPage({ initialCount }) {
 
   const handleChange = (event) => {
     const value = parseInt(event.target.value) || 0;
-    // setvalueToAdd(value);
     dispatch({
       type: SET_VALUE_TO_ADD,
       payload: value,
@@ -94,9 +57,6 @@ function CounterPage({ initialCount }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // setCount(count + valueToAdd);
-    // setvalueToAdd(0);
 
     dispatch({
       type: ADD_VALUE_TO_COUNT,
